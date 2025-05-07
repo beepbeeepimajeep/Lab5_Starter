@@ -15,4 +15,13 @@ function init() {
   const volumeIcon = document.querySelector('#volume-controls img');
   const playButton = document.querySelector('button');
   const confetti = new JSConfetti();
+ 
+  //horn
+  hornSelect.addEventListener('change', () => {
+    const selected = hornSelect.value;
+    hornImage.src = `assets/images/${selected}.svg`;
+    hornImage.alt = `${selected} image`;
+    hornAudio.src = `assets/audio/${selected}.mp3`;
+  });
+
 }
